@@ -1,14 +1,7 @@
+import  React from 'react';
+import ReactDOM from 'react-dom/client';
 
-// div
-//     div =>child 1
-//         h1
-//         h2
-//     /div
-//     div =>child 2
-//         h1
-//         h2
-//     /div
-// div
+
 const element = React.createElement("div",
     {id:"parent"},[
         React.createElement("div",{id:"child"},[
