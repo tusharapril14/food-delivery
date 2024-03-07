@@ -67,3 +67,11 @@ there are two types of dependencies:
 => package.json : it keeps tracks of the dependencies.
 => package.lock.json : it keeps track of the exact version of the dependencies.
 => node_modules are like db for the dependencies.
+
+
+## React js Notes Episode 3.
+JSX is a combination of javascript and Html, it has html like syntax.
+React is differnt and jsx is different
+At the end JSX is transpiled before going to the browser to be understood by JavaScript engine.
+Babel is the package that transpiles our jsx.
+Jsx and react.createElement are both same object.
