@@ -21,12 +21,12 @@ React CreateElements gives elements and it takes three arguments => createElemen
             ])
         )
     this piece of code shall result in the code below: - 
-    <div id="parent">
+    <!-- <div id="parent">
         <div id="children">
             <h1 id="child1">i'm child 1</h1>
             <h2 id="child2">i'm child 1</h2>
         </div>
-    </div>
+    </div> -->
 
 =>React Element is an object and at the end in converts in to Html Element.
 
