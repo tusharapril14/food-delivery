@@ -1,19 +1,26 @@
-
-const ResCard=()=>{
+import { IMG_URL } from "../Utils/mock/config"
+const ResCard=({resData})=>{
     return (
         <div className='res-card'>
             <div className='res-img'>
-                <img src="https://img.freepik.com/premium-vector/simple-minimalist-food-bag-restaurant-delivery-service-logo-design-vector_493994-1029.jpg" alt="" />
+                <img src={IMG_URL+resData.data.cloudinaryImageId} alt="" />
             </div>
             <div>
-                Bikanervala
+                {resData.data.name}
             </div>
             <div>
-                4*
+                {resData.data.cuisines.toString()}
             </div>
             <div>
-                22 mnts
+                ₹{resData.data.costForTwo/100 + 'For Two' }
             </div>
+            <div>
+                {resData.data.deliveryTime}
+            </div>
+            <div>
+                {resData.data.avgRating}*
+            </div>
+
         </div>
     )
 }
