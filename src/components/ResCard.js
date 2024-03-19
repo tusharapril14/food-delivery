@@ -12,10 +12,10 @@ const ResCard=({resData})=>{
                 {resData.data.cuisines.toString()}
             </div>
             <div>
-                ₹{resData.data.costForTwo/100 + 'For Two' }
+                ₹{resData.data.costForTwo/100 + ' For Two' }
             </div>
             <div>
-                {resData.data.deliveryTime}
+                {resData.data.deliveryTime + ' min'}
             </div>
             <div>
                 {resData.data.avgRating}*

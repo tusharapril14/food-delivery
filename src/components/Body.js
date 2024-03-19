@@ -12,7 +12,6 @@ const Body = ()=>{
    const searchRes = (event)=>{
         let target = event.target.value;
         let filterData = dummyData.filter(res=>res.data.name.toLowerCase().includes(target));
-
         setResData(filterData)
     }
 
@@ -20,7 +19,7 @@ const Body = ()=>{
           <div className='body-container'>
               <div className='search-bar'>
                   {/* <SearchBar/> */}
-                  <input type="text" onChange={(e)=>{searchRes(e)}} />
+                  <input type="text" placeholder="Search for restaurant" onChange={(e)=>{searchRes(e)}} />
               </div>
               <button onClick={()=>{filterTopRestaurant()}} >Filter Restaurant</button>
               <div className='res-container'>
