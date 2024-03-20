@@ -32,6 +32,20 @@ list-style-type: none;
     border-radius: 12px;
     word-wrap: break-word;
 }
+.shimmer-container{
+    justify-content:flex-start;
+    display: flex;
+    flex-wrap: wrap;
+}
+.shimmer-card{
+    background-color: #ccc;
+    height: 300px;
+    width: 160px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    margin: 10px;
+    padding: 10px;
+}
 .res-img > img{
     height: 100px;
     width: 160px;

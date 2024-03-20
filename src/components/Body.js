@@ -1,21 +1,35 @@
 import SearchBar from "./SearchBar";
 import ResCard from "./ResCard";
 import { RES_DATA } from "../Utils/mock/data";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import ShimmerCard from "./Shimmer";
 const Body = ()=>{
-    const [resData,setResData] = useState(RES_DATA)
-    let dummyData = RES_DATA;
+    const [resData,setResData] = useState([])
+    const [resDummyData,setDummyResData] = useState([])
+    useEffect(()=>{
+        fetchData();
+    },[])
+    const fetchData= async ()=>{
+        const json = await fetch('https://run.mocky.io/v3/9a7d31b3-1ce1-409e-91ad-eaab9c6dc74d');
+        const data = await json.json();
+        setResData(data?.data?.cards[2].data?.data?.cards)
+        setDummyResData(data?.data?.cards[2].data?.data?.cards)
+    }
     const filterTopRestaurant=()=>{
         let filteredRes = resData.filter(res=>res.data.avgRating>=4)
         setResData(filteredRes)
     }  
    const searchRes = (event)=>{
-        let target = event.target.value;
-        let filterData = dummyData.filter(res=>res.data.name.toLowerCase().includes(target));
+        let target = event.target.value?.toLowerCase();
+        let filterData = resDummyData.filter(res=>res.data.name.toLowerCase().includes(target));
         setResData(filterData)
     }
 
-    return (<div className='body'>
+    
+    return (
+    
+    
+    <div className='body'>
           <div className='body-container'>
               <div className='search-bar'>
                   {/* <SearchBar/> */}
@@ -24,7 +38,8 @@ const Body = ()=>{
               <button onClick={()=>{filterTopRestaurant()}} >Filter Restaurant</button>
               <div className='res-container'>
                 {
-                resData.map(res=><ResCard key={res.data.uuid} resData={res} />)
+                    resData.length===0 ? 
+                    <ShimmerCard/> : resData.map(res=><ResCard key={res.data.uuid} resData={res} />)
                 }
               </div>
           </div>
