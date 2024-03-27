@@ -11,15 +11,15 @@ const Body = ()=>{
         fetchData();
     },[])
     const fetchData= async ()=>{
-        try{
-            const json = await fetch('https://run.mocky.io/v3/9a7d31b3-1ce1-409e-91ad-eaab9c6dc74d');
-            const data = await json.json();
-            setResData(data?.data?.cards[2].data?.data?.cards)
-            setDummyResData(data?.data?.cards[2].data?.data?.cards)
-        }
-        catch (e) {
-            console.log(e)
-        }
+        // try{
+        //     const json = await fetch('https://run.mocky.io/v3/9a7d31b3-1ce1-409e-91ad-eaab9c6dc74d');
+        //     const data = await json.json();
+        //     setResData(data?.data?.cards[2].data?.data?.cards)
+        //     setDummyResData(data?.data?.cards[2].data?.data?.cards)
+        // }
+        // catch (e) {
+        //     console.log(e)
+        // }
 
     }
     const filterTopRestaurant=()=>{
