@@ -23,5 +23,16 @@ const ResCard=({resData})=>{
 
         </div>
     )
+    
+}
+export const  withPromotedLabel = () =>{
+    return (props)=>{
+        return (
+            <div>
+                <label>Promoted</label>
+                <ResCard resData={props.resData}/>
+            </div>
+        )
+    }
 }
 export default ResCard
