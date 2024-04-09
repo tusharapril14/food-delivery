@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Header = ()=>{
     const [authBtn,setAuthBtn] = useState("Login")
     return (
-        <header className="bg-white ">
+        <header className="bg-white rounded dark:text-blue-800  ">
             <nav className="flex justify-between px-5" aria-label="Global">
                 <div className="flex justify-between w-full">
                 <div>

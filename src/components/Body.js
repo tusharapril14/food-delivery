@@ -37,10 +37,10 @@ const Body = ()=>{
     
     <div className='body'>
           <div className='body-container'>
-              <div className='search-bar'>
+              {/* <div className='search-bar'>
                   <input type="text" placeholder="Search for restaurant" onChange={(e)=>{searchRes(e)}} />
-              </div>
-              <button onClick={()=>{filterTopRestaurant()}} >Filter Restaurant</button>
+              </div> */}
+              {/* <button onClick={()=>{filterTopRestaurant()}} >Filter Restaurant</button> */}
               <div className='res-container'>
                 {
                     resData.length===0 ? 
